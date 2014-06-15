@@ -2,8 +2,8 @@
 window.onload = function() {
   'use strict';
 
-  function elements(){
-    var self = this ||  {};
+  var elements = function(){
+    var self = {};
 
     self.elements = function(selector){
       self.selectedElements = document.querySelectorAll(selector);
@@ -19,7 +19,7 @@ window.onload = function() {
       return self.node.textContent;
     };
     return self;
-  }
+  };
 
   var by = {
     'tag': function(selector){
@@ -39,7 +39,7 @@ window.onload = function() {
     .elements(by.css('.user-block'))
     .elements(by.attr('ng-model', 'email'))
     .first()
-    .text() == 'a@x.com') {
+    .text() === 'a@x.com') {
     alert('Задание выполнено!');
   }
 
