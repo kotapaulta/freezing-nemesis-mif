@@ -1,5 +1,4 @@
 /*global alert*/
-
 window.onload = function() {
   'use strict';
 
@@ -32,8 +31,7 @@ window.onload = function() {
     },
 
     'attr': function(sel1,sel2){
-      var selector = '['+ sel1 + '=' + '\'' +sel2 + '\']';
-      return selector;
+      return '['+ sel1 + '=' + '\'' +sel2 + '\']';
     }
   };
 
